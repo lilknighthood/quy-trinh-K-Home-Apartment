@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sơ đồ Quy trình Đăng ký Tư vấn K-Home Apartment</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f4f7f9;
+        }
+        .process-step {
+            position: relative;
+            padding: 1rem;
+            border-radius: 0.5rem;
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+            transition: all 0.3s ease;
+            height: 100%;
+        }
+        .process-step:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -2px rgb(0 0 0 / 0.1);
+        }
+        .actor-title {
+            font-weight: 600;
+            color: #1f2937;
+            border-bottom: 2px solid;
+            padding-bottom: 0.5rem;
+            margin-bottom: 1rem;
+        }
+        .phase-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            padding: 1rem;
+            border-radius: 0.5rem;
+            text-align: center;
+            color: white;
+        }
+        /* New color scheme based on #f26a23 */
+        .priority-1 { background-color: #f26a23; }
+        .priority-2 { background-color: #fb923c; } /* orange-400 */
+        .free-market { background-color: #fdba74; } /* orange-300 */
+        .details-section { background-color: #6b7280; }
+
+        .sub-step {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start; /* Align items to the top */
+            padding: 1rem;
+            border-radius: 0.5rem;
+            margin-top: 0.75rem;
+            font-size: 0.875rem;
+            height: 100%;
+        }
+    </style>
+</head>
+<body class="p-4 md:p-8">
+    <div class="max-w-7xl mx-auto">
+        <h1 class="text-2xl md:text-3xl font-bold text-center text-gray-800 mb-8">Sơ đồ Quy trình Xác nhận Đăng ký Tư vấn - K-Home Apartment</h1>
+
+        <!-- Timeline Section -->
+        <div class="mb-12">
+            <h2 class="text-xl font-bold text-center text-gray-700 mb-6">Dòng thời gian sự kiện</h2>
+            <div class="grid grid-cols-1 md:grid-cols-5 gap-4 text-center items-center">
+                <div class="process-step bg-white">
+                    <div class="text-lg font-semibold text-orange-600">08:30</div>
+                    <p class="text-gray-600">Bắt đầu sự kiện</p>
+                </div>
+                <div class="flex justify-center items-center text-2xl text-gray-400 md:rotate-0 rotate-90">&rarr;</div>
+                <div class="process-step bg-white">
+                    <div class="text-lg font-semibold text-orange-600">10:00</div>
+                    <p class="text-gray-600">Thuyết trình dự án</p>
+                </div>
+                <div class="flex justify-center items-center text-2xl text-gray-400 md:rotate-0 rotate-90">&rarr;</div>
+                <div class="process-step bg-white">
+                    <div class="text-lg font-semibold text-red-600">10:30</div>
+                    <p class="text-gray-600">Công bố Bảng giá & Chính sách</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Priority 1 Flow -->
+        <div class="mb-12">
+            <div class="phase-title priority-1 mb-6">Giai đoạn 1: Thị trường Ưu tiên 1 (10:40 - 11:40)</div>
+            
+            <!-- Top Row: 3 steps -->
+            <div class="grid grid-cols-1 md:grid-cols-5 gap-x-6 gap-y-8 items-start">
+                <!-- NVKD -->
+                <div class="text-center">
+                    <h3 class="actor-title border-orange-500">NVKD</h3>
+                    <div class="process-step bg-orange-100">
+                        <p class="font-semibold">Bước 1</p>
+                        <p>Chuẩn bị & nộp bộ hồ sơ hoàn chỉnh.</p>
+                    </div>
+                </div>
+
+                <!-- Arrow 1 -->
+                <div class="h-full items-center justify-center hidden md:flex"><div class="text-4xl text-gray-400">&rarr;</div></div>
+
+                <!-- NS Hỗ trợ -->
+                <div class="text-center">
+                    <h3 class="actor-title border-orange-500">NS Hỗ trợ</h3>
+                    <div class="process-step bg-orange-100">
+                        <p class="font-semibold">Bước 2</p>
+                        <p>Nhận hồ sơ từ NVKD và chuyển đến bàn HCKD.</p>
+                    </div>
+                </div>
+
+                <!-- Arrow 2 -->
+                <div class="h-full items-center justify-center hidden md:flex"><div class="text-4xl text-gray-400">&rarr;</div></div>
+
+                <!-- HCKD -->
+                <div class="text-center">
+                    <h3 class="actor-title border-orange-500">HCKD</h3>
+                    <div class="process-step bg-orange-100">
+                        <p class="font-semibold">Bước 3</p>
+                        <p>Kiểm tra, bôi màu sản phẩm, ký nháy & chuyển cho Kế toán.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Down Arrow -->
+            <div class="flex justify-center items-center text-4xl text-gray-400 my-8">&darr;</div>
+
+            <!-- Middle Row: Kế toán (wider) -->
+            <div class="flex justify-center">
+                <div class="w-full md:w-4/5 lg:w-2/3 text-center">
+                    <h3 class="actor-title border-orange-500">Kế toán</h3>
+                    <div class="process-step bg-orange-100">
+                        <p class="font-semibold">Bước 4: Đóng dấu & Phân loại hồ sơ</p>
+                        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-4 text-center">
+                            <div class="sub-step bg-orange-200">
+                                <div>
+                                    <i class="fas fa-archive text-orange-700 text-4xl mb-3"></i>
+                                    <p class="font-bold">Rổ "LƯU KẾ TOÁN"</p>
+                                </div>
+                                <ul class="text-left text-xs list-disc list-outside pl-4 mt-2 space-y-1">
+                                    <li>01 Phiếu xác nhận đặt cọc tư vấn</li>
+                                    <li>01 Phiếu cam kết hồ sơ đăng ký NOXH</li>
+                                </ul>
+                            </div>
+                            <div class="sub-step bg-orange-200">
+                                <div>
+                                    <i class="fas fa-paper-plane text-orange-700 text-4xl mb-3"></i>
+                                    <p class="font-bold">Rổ "TRUNG CHUYỂN CRM"</p>
+                                </div>
+                                <ul class="text-left text-xs list-disc list-outside pl-4 mt-2 space-y-1">
+                                    <li>01 Phiếu xác nhận đặt cọc tư vấn</li>
+                                </ul>
+                            </div>
+                            <div class="sub-step bg-orange-200">
+                                <div>
+                                    <i class="fas fa-undo-alt text-orange-700 text-4xl mb-3"></i>
+                                    <p class="font-bold">Rổ "TRẢ HỒ SƠ"</p>
+                                </div>
+                                <ul class="text-left text-xs list-disc list-outside pl-4 mt-2 space-y-1">
+                                    <li>01 Phiếu xác nhận đặt cọc tư vấn</li>
+                                    <li>01 Phiếu đăng ký đặt chỗ tư vấn</li>
+                                    <li>Phiếu thu</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Down Arrow -->
+            <div class="flex justify-center items-center text-4xl text-gray-400 my-8">&darr;</div>
+
+            <!-- Bottom Row: Hoàn tất -->
+            <div class="text-center max-w-sm mx-auto">
+                <h3 class="actor-title border-orange-500">Hoàn tất</h3>
+                <div class="process-step bg-orange-100">
+                    <p class="font-semibold">Bước 5</p>
+                    <p>NS Hỗ trợ nhận lại hồ sơ từ rổ "TRẢ HỒ SƠ" và giao cho NVKD để hoàn tất.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Priority 2 & Free Market & Details -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16">
+            <div class="mb-6">
+                <div class="phase-title priority-2 mb-6">Giai đoạn 2: Thị trường Ưu tiên 2 (11:40 - 12:10)</div>
+                <div class="process-step bg-orange-100 text-center">
+                    <p class="font-semibold">Quy trình tương tự Thị trường Ưu tiên 1.</p>
+                </div>
+            </div>
+            <div class="mb-6">
+                <div class="phase-title free-market mb-6">Giai đoạn 3: Thị trường Tự do (Từ 12:10)</div>
+                <div class="process-step bg-orange-100 text-left">
+                    <p class="font-semibold mb-3">Quy trình tương tự, nhưng NVKD cần kiểm tra giỏ hàng còn lại trước khi chốt sản phẩm.</p>
+                    <hr class="border-orange-200 my-3">
+                    <p class="font-semibold mb-2">Điều kiện xác nhận:</p>
+                    <ul class="text-sm list-disc list-outside pl-5 space-y-2">
+                        <li>Khách hàng chưa có phiếu đăng ký đặt chỗ tư vấn Ưu tiên 1 & Ưu tiên 2.</li>
+                        <li>Khách hàng có phiếu đăng ký đặt chỗ tư vấn Ưu tiên 1 và Ưu tiên 2 nhưng không chuyển xác nhận trong thị trường Ưu tiên 1 và Ưu tiên 2.</li>
+                        <li>Khách hàng phải thanh toán đủ số tiền theo quy định tối thiểu là <b>30.000.000 đồng</b> (ba mươi triệu đồng) trong buổi xác nhận đăng ký tư vấn.</li>
+                    </ul>
+                </div>
+            </div>
+             <div class="mb-6">
+                <div class="phase-title details-section mb-6">Chi tiết Hồ sơ cần nộp</div>
+                <div class="process-step bg-gray-100 text-left">
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <i class="fas fa-file-invoice-dollar text-gray-600 mt-1 mr-3"></i>
+                            <span><b>Phiếu thu</b> đặt chỗ ưu tiên (UT).</span>
+                        </li>
+                        <li class="flex items-start">
+                             <i class="fas fa-file-signature text-gray-600 mt-1 mr-3"></i>
+                            <span><b>01 Phiếu đăng ký</b> đặt chỗ tư vấn.</span>
+                        </li>
+                        <li class="flex items-start">
+                             <i class="fas fa-file-contract text-gray-600 mt-1 mr-3"></i>
+                            <span><b>03 Phiếu xác nhận</b> đặt cọc tư vấn.</span>
+                        </li>
+                        <li class="flex items-start">
+                             <i class="fas fa-file-shield-alt text-gray-600 mt-1 mr-3"></i>
+                            <span><b>01 Phiếu cam kết</b> hồ sơ đăng ký NOXH.</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>
